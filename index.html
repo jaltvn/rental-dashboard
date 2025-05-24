@@ -395,56 +395,10 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
                 <div class="p-8 min-h-screen">
                     <div class="max-w-7xl mx-auto space-y-8">
                         <!-- Header -->
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-2">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                             <div>
                                 <h1 class="text-3xl font-bold text-gray-900">Vancouver Rental Dashboard</h1>
                                 <p class="text-gray-600 mt-1">Purpose-built rental units market analysis</p>
-                            </div>
-
-                        <!-- Rent Range Section -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="text-lg font-semibold">Rent per Square Foot Range</h3>
-                            </div>
-                            <div class="card-content">
-                                <div class="space-y-4">
-                                    ${['studio', '1bed', '2bed', '3bed'].map(unitType => {
-                                        const range = rentRanges[unitType];
-                                        if (range.min === 0 && range.max === 0) return '';
-                                        
-                                        return `
-                                            <div class="space-y-2">
-                                                <div class="flex justify-between text-sm">
-                                                    <span class="font-medium capitalize">
-                                                        ${unitType === 'studio' ? 'Studio' : unitType.replace('bed', ' Bedroom')}
-                                                    </span>
-                                                    <span>${range.min.toFixed(2)} - ${range.max.toFixed(2)}/sqft</span>
-                                                </div>
-                                                <div class="range-bar">
-                                                    <div class="range-fill" style="width: 100%"></div>
-                                                </div>
-                                            </div>
-                                        `;
-                                    }).filter(html => html !== '').join('')}
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Historical Trends Chart -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="text-lg font-semibold">Historical Rent per Square Foot Trends</h3>
-                            </div>
-                            <div class="card-content">
-                                <div style="height: 400px; padding: 16px 0;">
-                                    ${chartData.length > 0 ? `
-                                        <canvas id="trendsChart"></canvas>
-                                    ` : `
-                                        <div class="flex items-center justify-center h-full text-gray-500">
-                                            No historical data available
-                                        </div>
-                                    `}
-                                </div>
                             </div>
                             
                             <!-- Filters -->
@@ -511,19 +465,66 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
                                         <div class="space-y-2">
                                             <div>
                                                 <div class="text-2xl font-bold text-gray-900">
-                                                    $${kpis[unitType].avgRent.toLocaleString()}
+                                                    ${kpis[unitType].avgRent.toLocaleString()}
                                                 </div>
                                                 <div class="text-xs text-gray-500">Average Rent</div>
                                             </div>
                                             <div>
                                                 <div class="text-lg font-semibold text-blue-600">
-                                                    $${kpis[unitType].avgPricePerSqft}/sqft
+                                                    ${kpis[unitType].avgPricePerSqft}/sqft
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             `).join('')}
+                        </div>
+
+                        <!-- Rent Range Section -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="text-lg font-semibold">Rent per Square Foot Range</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="space-y-6">
+                                    ${['studio', '1bed', '2bed', '3bed'].map(unitType => {
+                                        const range = rentRanges[unitType];
+                                        if (range.min === 0 && range.max === 0) return '';
+                                        
+                                        return `
+                                            <div class="space-y-3">
+                                                <div class="flex justify-between text-sm">
+                                                    <span class="font-medium capitalize">
+                                                        ${unitType === 'studio' ? 'Studio' : unitType.replace('bed', ' Bedroom')}
+                                                    </span>
+                                                    <span>${range.min.toFixed(2)} - ${range.max.toFixed(2)}/sqft</span>
+                                                </div>
+                                                <div class="range-bar">
+                                                    <div class="range-fill" style="width: 100%"></div>
+                                                </div>
+                                            </div>
+                                        `;
+                                    }).filter(html => html !== '').join('')}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Historical Trends Chart -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="text-lg font-semibold">Historical Rent per Square Foot Trends</h3>
+                            </div>
+                            <div class="card-content">
+                                <div style="height: 400px; padding: 16px 0;">
+                                    ${chartData.length > 0 ? `
+                                        <canvas id="trendsChart"></canvas>
+                                    ` : `
+                                        <div class="flex items-center justify-center h-full text-gray-500">
+                                            No historical data available
+                                        </div>
+                                    `}
+                                </div>
+                            </div>
                         </div>
 
                         <!-- Status Message -->
