@@ -1,0 +1,113 @@
+﻿ID,Date Added,Building,Unit Size,Rent,Avg Sq Ft,Avg Rent/sqft,Neighbourhood,City,In-Suite Laundry,Pet Friendly,Parking,EV Charging,AC,Furnished,Gym
+88553012,Apr-25,revolve,studio," $2,275.00 ",347, $6.56 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+D63A4C90,Apr-25,revolve,studio," $2,400.00 ",377, $6.37 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+C9463EDF,Apr-25,revolve,studio," $2,600.00 ",369, $7.05 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+81933801,Apr-25,revolve,1bed," $2,500.00 ",504, $4.96 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+BC3EB645,Apr-25,revolve,1bed," $2,600.00 ",468, $5.56 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+75F57F85,Apr-25,revolve,1bed," $2,650.00 ",477, $5.56 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+6935A9FB,Apr-25,revolve,2bed," $3,400.00 ",657, $5.18 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+30F81104,Apr-25,revolve,2bed," $3,500.00 ",649, $5.39 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+1352B810,Apr-25,revolve,2bed," $3,500.00 ",632, $5.54 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+CE60F460,Apr-25,revolve,3bed," $4,500.00 ",1039, $4.33 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE
+D90BE070,Apr-25,hyland,studio," $2,255.00 ",400, $5.64 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+FCB9E6E0,Apr-25,hyland,1bed," $2,935.00 ",431, $6.81 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+E0FD5B7E,Apr-25,hyland,2bed," $3,345.00 ",700, $4.78 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+83831FBD,Apr-25,hyland,3bed," $4,945.00 ",1029, $4.81 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+82A0D3B7,Apr-25,Fynn,2bed," $2,922.00 ",725, $4.03 ,River District,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+1B84BF25,Apr-25,Fynn,3bed," $3,331.00 ",975, $3.42 ,River District,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+ECD27CB2,Apr-25,Cedar Lane,studio," $2,275.00 ",450, $5.06 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+FEE78870,Apr-25,Cedar Lane,studio," $2,295.00 ",475, $4.83 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+26E2CBF3,Apr-25,Cedar Lane,studio," $2,325.00 ",485, $4.79 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+CBA7A2D9,Apr-25,Cedar Lane,studio," $2,395.00 ",450, $5.32 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+A04DB8D0,Apr-25,Cedar Lane,studio," $2,425.00 ",555, $4.37 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+085A29A5,Apr-25,Cedar Lane,studio," $2,459.00 ",465, $5.29 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+4C7BE57F,Apr-25,Cedar Lane,1bed," $2,775.00 ",620, $4.48 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+82527325,Apr-25,Cedar Lane,1bed," $2,775.00 ",650, $4.27 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+13BBFE22,Apr-25,Cedar Lane,1bed," $2,795.00 ",620, $4.51 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+98CCC574,Apr-25,Cedar Lane,1bed," $2,825.00 ",620, $4.56 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+1E81208C,Apr-25,Cedar Lane,1bed," $2,945.00 ",680, $4.33 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+AB6165F9,Apr-25,Cedar Lane,1bed," $3,020.00 ",680, $4.44 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+CCF4371D,Apr-25,Cedar Lane,1bed," $3,175.00 ",710, $4.47 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+881FE9AC,Apr-25,Cedar Lane,2bed," $3,450.00 ",735, $4.69 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+07A8BFC8,Apr-25,Cedar Lane,2bed," $3,550.00 ",820, $4.33 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+9F6D0CDC,Apr-25,Cedar Lane,2bed," $3,595.00 ",735, $4.89 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+057095AD,Apr-25,Cedar Lane,2bed," $3,650.00 ",735, $4.97 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+F90E15F8,Apr-25,Cedar Lane,2bed," $3,725.00 ",735, $5.07 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+4BD0BC7C,Apr-25,Cedar Lane,2bed," $3,795.00 ",820, $4.63 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+3AA6DCC9,Apr-25,Cedar Lane,2bed," $3,825.00 ",845, $4.53 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+AE52AEF8,Apr-25,Cedar Lane,2bed," $3,900.00 ",820, $4.76 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+584CC271,Apr-25,Cedar Lane,2bed," $4,099.00 ",950, $4.31 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+1F13E98F,Apr-25,Cedar Lane,2bed," $4,395.00 ",935, $4.70 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+EAC65B17,Apr-25,Cedar Lane,2bed," $4,495.00 ",935, $4.81 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+68AF3C00,Apr-25,Cedar Lane,3bed," $4,900.00 ",1125, $4.36 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+362EAF41,Apr-25,Cedar Lane,3bed," $4,950.00 ",1125, $4.40 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+A2B2F3ED,Apr-25,Cedar Lane,3bed," $4,995.00 ",1125, $4.44 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE
+81F0AEBD,Apr-25,CHROMA,studio," $2,200.00 ",400, $5.50 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+62536B40,Apr-25,CHROMA,1bed," $2,705.00 ",512, $5.28 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+6A2F3058,Apr-25,CHROMA,1bed," $2,800.00 ",577, $4.85 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+DACEFADA,Apr-25,CHROMA,1bed," $2,845.00 ",742, $3.83 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+759362C8,Apr-25,CHROMA,1bed," $2,890.00 ",625, $4.62 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+FFA95999,Apr-25,CHROMA,1bed," $5,250.00 ",1032, $5.09 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+5BFA6CBC,Apr-25,CHROMA,2bed," $4,500.00 ",760, $5.92 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+B8238398,Apr-25,CHROMA,2bed," $5,250.00 ",912, $5.76 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+C712039B,Apr-25,Larch 2,studio," $2,350.00 ",393, $5.98 ,Kitsilano,Vancouver,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+666E6552,Apr-25,Larch 2,2bed," $4,050.00 ",747, $5.42 ,Kitsilano,Vancouver,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE
+5BE6EDE4,May-25,M41N,studio," $2,380.00 ",509, $4.68 ,Riley Park,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+7A9E06E1,May-25,M41N,1bed," $2,565.00 ",506, $5.07 ,Riley Park,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+8279EC10,May-25,M41N,2bed," $3,430.00 ",705, $4.87 ,Riley Park,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+E34D986F,May-25,M41N,2bed," $3,715.00 ",839, $4.43 ,Riley Park,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+BE3CC66D,May-25,The Riley,1bed," $2,625.00 ",500, $5.25 ,Riley Park,Vancouver,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+CE436262,May-25,Comma Fraser,studio," $2,075.00 ",492, $4.22 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+72658F6A,May-25,Comma Fraser,2bed," $3,300.00 ",803, $4.11 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+EE60655F,May-25,The Amazing Brentwood,1bed," $2,550.00 ",560, $4.55 ,Brentwood,Burnaby,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+69F6361C,May-25,The Amazing Brentwood,1bed," $2,650.00 ",682, $3.89 ,Brentwood,Burnaby,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+06C1028A,May-25,The Amazing Brentwood,1bed," $2,740.00 ",617, $4.44 ,Brentwood,Burnaby,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+51C1A5F7,May-25,The Amazing Brentwood,2bed," $3,200.00 ",875, $3.66 ,Brentwood,Burnaby,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+5BB01C6E,May-25,The Amazing Brentwood,2bed," $3,540.00 ",863, $4.10 ,Brentwood,Burnaby,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+DA5E095C,May-25,The Amazing Brentwood,2bed," $3,595.00 ",885, $4.06 ,Brentwood,Burnaby,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+15DFFCCD,May-25,The Amazing Brentwood,2bed," $3,635.00 ",900, $4.04 ,Brentwood,Burnaby,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+FF80250A,May-25,Brentwood Hillside West,1bed," $2,300.00 ",535, $4.30 ,Brentwood,Burnaby,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+4436F474,May-25,4433 Alaska,2bed," $3,400.00 ",910, $3.74 ,Brentwood,Burnaby,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+85E978F1,May-25,The Mansion,studio," $2,250.00 ",525, $4.29 ,West End,Vancouver,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+6203229E,May-25,The Mansion,1bed," $2,500.00 ",542, $4.61 ,West End,Vancouver,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+65AFCDAD,May-25,The Mansion,1bed," $2,795.00 ",725, $3.86 ,West End,Vancouver,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE
+EBA6687F,May-25,Muro,1bed," $3,300.00 ",554, $5.96 ,West End,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+454BE7E6,May-25,Muro,1bed," $3,450.00 ",654, $5.28 ,West End,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE
+660B90F9,May-25,Eastward,Studio," $2,258.00 ",423, $5.34 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+190C6A78,May-25,Eastward,1bed," $2,608.00 ",500, $5.22 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+5EBDAA9F,May-25,Eastward,1bed," $2,858.00 ",532, $5.37 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+4BF88FB5,May-25,Eastward,2bed," $3,210.00 ",617, $5.20 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+9861B27B,May-25,Eastward,3bed," $4,908.00 ",1215, $4.04 ,Kensington-Cedar Cottage,Vancouver,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,TRUE
+67583218,May-25,19 on the Greenway,studio," $2,375.00 ",357, $6.65 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+8BBB213A,May-25,19 on the Greenway,studio," $2,400.00 ",358, $6.70 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+1DFA806D,May-25,19 on the Greenway,studio," $2,400.00 ",353, $6.80 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+278D78C4,May-25,19 on the Greenway,studio," $2,400.00 ",358, $6.70 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+A3EFD756,May-25,19 on the Greenway,studio," $2,400.00 ",355, $6.76 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+1898791C,May-25,19 on the Greenway,studio," $2,523.00 ",469, $5.38 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+7045B197,May-25,19 on the Greenway,1bed," $3,000.00 ",533, $5.63 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+F66BBD34,May-25,19 on the Greenway,1bed," $3,075.00 ",467, $6.58 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+21FFD0B9,May-25,19 on the Greenway,1bed," $3,075.00 ",514, $5.98 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+01353618,May-25,19 on the Greenway,1bed," $3,075.00 ",518, $5.94 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+0D77F702,May-25,19 on the Greenway,1bed," $3,150.00 ",461, $6.83 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+C2C0D4CB,May-25,19 on the Greenway,1bed," $3,150.00 ",473, $6.66 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+4FDB116E,May-25,19 on the Greenway,1bed," $3,250.00 ",535, $6.07 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+F4AD3EAF,May-25,19 on the Greenway,2bed," $3,775.00 ",770, $4.90 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+F8AB1EDE,May-25,19 on the Greenway,2bed," $3,900.00 ",744, $5.24 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+BA5EE24A,May-25,19 on the Greenway,2bed," $4,000.00 ",775, $5.16 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+6F8E6108,May-25,19 on the Greenway,2bed," $4,000.00 ",840, $4.76 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+760A044A,May-25,19 on the Greenway,2bed," $4,000.00 ",755, $5.30 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+EB35EF33,May-25,19 on the Greenway,2bed," $4,150.00 ",702, $5.91 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+EC5E54C1,May-25,19 on the Greenway,2bed," $4,300.00 ",801, $5.37 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+3F0CFE9B,May-25,19 on the Greenway,2bed," $4,300.00 ",802, $5.36 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+054FEB37,May-25,19 on the Greenway,3bed," $4,300.00 ",834, $5.16 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+A05E88B4,May-25,19 on the Greenway,3bed," $4,350.00 ",827, $5.26 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+1246CA70,May-25,19 on the Greenway,3bed," $4,550.00 ",968, $4.70 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+0F668931,May-25,19 on the Greenway,3bed," $4,550.00 ",931, $4.89 ,Arbutus Ridge,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+6FC92FC1,May-25,Faber Block,studio," $2,300.00 ",443, $5.19 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+F251DD0C,May-25,Faber Block,studio," $2,600.00 ",671, $3.87 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+5C03C089,May-25,Faber Block,1bed," $2,900.00 ",554, $5.23 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+C925D425,May-25,Faber Block,1bed," $3,200.00 ",701, $4.56 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+6B2D1B85,May-25,Faber Block,2bed," $3,850.00 ",827, $4.66 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+BB640CDB,May-25,Faber Block,2bed," $4,400.00 ",898, $4.90 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
+BFEF8597,May-25,Faber Block,2bed," $4,000.00 ",824, $4.85 ,Mount Pleasant,Vancouver,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE
