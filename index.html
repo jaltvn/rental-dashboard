@@ -11,6 +11,9 @@
     <!-- PapaParse for CSV -->
     <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
     
+    <!-- Chart.js for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <style>
         .card {
             background: white;
@@ -59,6 +62,46 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 8px;
+            width: 256px;
+            background: white;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 12px;
+            z-index: 10;
+            display: none;
+        }
+        .dropdown-content.show {
+            display: block;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .range-bar {
+            width: 100%;
+            background: #e5e7eb;
+            border-radius: 9999px;
+            height: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        .range-fill {
+            background: #3b82f6;
+            height: 100%;
+            border-radius: 9999px;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -102,6 +145,28 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
         let selectedRegion = 'Vancouver';
         let selectedAmenities = [];
         let usingSampleData = false;
+        let showAmenityDropdown = false;
+
+        // Amenity options
+        const amenities = [
+            { id: 'in-suite-laundry', name: 'In-Suite Laundry' },
+            { id: 'pet-friendly', name: 'Pet Friendly' },
+            { id: 'parking', name: 'Parking' },
+            { id: 'ev-charging', name: 'EV Charging' },
+            { id: 'ac', name: 'AC' },
+            { id: 'furnished', name: 'Furnished' },
+            { id: 'gym', name: 'Gym' }
+        ];
+
+        const amenityColumnMap = {
+            'in-suite-laundry': 'In-Suite Laundry',
+            'pet-friendly': 'Pet Friendly',
+            'parking': 'Parking',
+            'ev-charging': 'EV Charging',
+            'ac': 'AC',
+            'furnished': 'Furnished',
+            'gym': 'Gym'
+        };
 
         // Helper functions
         function parseCurrency(value) {
@@ -217,20 +282,10 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
             }
 
             // Filter by amenities
-            const amenityMap = {
-                'in-suite-laundry': 'In-Suite Laundry',
-                'pet-friendly': 'Pet Friendly',
-                'parking': 'Parking',
-                'ev-charging': 'EV Charging',
-                'ac': 'AC',
-                'furnished': 'Furnished',
-                'gym': 'Gym'
-            };
-
             if (selectedAmenities.length > 0) {
                 filtered = filtered.filter(unit => {
                     return selectedAmenities.every(amenityId => {
-                        const columnName = amenityMap[amenityId];
+                        const columnName = amenityColumnMap[amenityId];
                         return unit[columnName] === true;
                     });
                 });
@@ -239,7 +294,72 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
             return filtered;
         }
 
-        // Calculate KPIs
+        // Calculate rent ranges
+        function calculateRentRanges(filteredData) {
+            const unitTypes = ['studio', '1bed', '2bed', '3bed'];
+            const result = {};
+
+            unitTypes.forEach(unitType => {
+                const units = filteredData.filter(unit => unit['Unit Size'] === unitType);
+                if (units.length > 0) {
+                    const prices = units.map(unit => unit['Avg Rent/sqft']);
+                    result[unitType] = {
+                        min: Math.min(...prices),
+                        max: Math.max(...prices)
+                    };
+                } else {
+                    result[unitType] = { min: 0, max: 0 };
+                }
+            });
+
+            return result;
+        }
+
+        // Generate chart data
+        function generateChartData() {
+            if (!rentalData.length) return [];
+
+            const quarters = {};
+            
+            rentalData.forEach(unit => {
+                const date = unit['Date Added'];
+                const year = date.getFullYear();
+                const month = date.getMonth() + 1;
+                const quarter = Math.ceil(month / 3);
+                const quarterKey = `${year}-Q${quarter}`;
+                
+                if (!quarters[quarterKey]) {
+                    quarters[quarterKey] = {
+                        studio: [],
+                        '1bed': [],
+                        '2bed': [],
+                        '3bed': []
+                    };
+                }
+                
+                const unitType = unit['Unit Size'];
+                if (quarters[quarterKey][unitType]) {
+                    quarters[quarterKey][unitType].push(unit['Avg Rent/sqft']);
+                }
+            });
+
+            return Object.keys(quarters).sort().map(quarterKey => {
+                const data = { period: quarterKey };
+                
+                Object.keys(quarters[quarterKey]).forEach(unitType => {
+                    const prices = quarters[quarterKey][unitType];
+                    if (prices.length > 0) {
+                        const avg = prices.reduce((sum, price) => sum + price, 0) / prices.length;
+                        const label = unitType === 'studio' ? 'Studio' : 
+                                     unitType === '1bed' ? '1 Bed' :
+                                     unitType === '2bed' ? '2 Bed' : '3 Bed';
+                        data[label] = parseFloat(avg.toFixed(2));
+                    }
+                });
+                
+                return data;
+            });
+        }
         function calculateKPIs(filteredData) {
             const unitTypes = ['studio', '1bed', '2bed', '3bed'];
             const result = {};
@@ -267,6 +387,8 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
             
             const filteredData = getFilteredData();
             const kpis = calculateKPIs(filteredData);
+            const rentRanges = calculateRentRanges(filteredData);
+            const chartData = generateChartData();
             
             const html = `
                 <div class="p-6 min-h-screen">
@@ -282,6 +404,52 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
                                         `Showing ${filteredData.length} units from ${rentalData.length} total units`
                                     }
                                 </p>
+                            </div>
+
+                        <!-- Rent Range Section -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="text-lg font-semibold">Rent per Square Foot Range</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="space-y-4">
+                                    ${['studio', '1bed', '2bed', '3bed'].map(unitType => {
+                                        const range = rentRanges[unitType];
+                                        if (range.min === 0 && range.max === 0) return '';
+                                        
+                                        return `
+                                            <div class="space-y-2">
+                                                <div class="flex justify-between text-sm">
+                                                    <span class="font-medium capitalize">
+                                                        ${unitType === 'studio' ? 'Studio' : unitType.replace('bed', ' Bedroom')}
+                                                    </span>
+                                                    <span>${range.min.toFixed(2)} - ${range.max.toFixed(2)}/sqft</span>
+                                                </div>
+                                                <div class="range-bar">
+                                                    <div class="range-fill" style="width: 100%"></div>
+                                                </div>
+                                            </div>
+                                        `;
+                                    }).filter(html => html !== '').join('')}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Historical Trends Chart -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="text-lg font-semibold">Historical Rent per Square Foot Trends</h3>
+                            </div>
+                            <div class="card-content">
+                                <div style="height: 320px;">
+                                    ${chartData.length > 0 ? `
+                                        <canvas id="trendsChart"></canvas>
+                                    ` : `
+                                        <div class="flex items-center justify-center h-full text-gray-500">
+                                            No historical data available
+                                        </div>
+                                    `}
+                                </div>
                             </div>
                             
                             <!-- Filters -->
@@ -301,6 +469,30 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
                                         ).join('')}
                                     </optgroup>
                                 </select>
+                                
+                                <div class="dropdown">
+                                    <button id="amenityButton" class="btn btn-outline min-w-40">
+                                        🏠 Amenities (${selectedAmenities.length})
+                                    </button>
+                                    <div id="amenityDropdown" class="dropdown-content">
+                                        <h4 class="font-medium mb-3">Filter by Amenities</h4>
+                                        ${amenities.map(amenity => `
+                                            <div class="checkbox-item">
+                                                <input type="checkbox" id="amenity-${amenity.id}" 
+                                                       ${selectedAmenities.includes(amenity.id) ? 'checked' : ''}
+                                                       onchange="toggleAmenity('${amenity.id}')">
+                                                <label for="amenity-${amenity.id}" class="text-sm">
+                                                    ${amenity.name}
+                                                </label>
+                                            </div>
+                                        `).join('')}
+                                        ${selectedAmenities.length > 0 ? `
+                                            <button onclick="clearAmenities()" class="btn btn-outline w-full mt-3 text-sm">
+                                                Clear Amenities
+                                            </button>
+                                        ` : ''}
+                                    </div>
+                                </div>
                                 
                                 ${(selectedRegion !== 'Vancouver' || selectedAmenities.length > 0) ? `
                                     <button id="clearFilters" class="btn btn-outline">
@@ -376,6 +568,31 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
                     renderDashboard();
                 });
             }
+
+            // Amenity dropdown functionality
+            const amenityButton = document.getElementById('amenityButton');
+            const amenityDropdown = document.getElementById('amenityDropdown');
+            
+            if (amenityButton && amenityDropdown) {
+                amenityButton.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showAmenityDropdown = !showAmenityDropdown;
+                    amenityDropdown.classList.toggle('show', showAmenityDropdown);
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!amenityButton.contains(e.target) && !amenityDropdown.contains(e.target)) {
+                        showAmenityDropdown = false;
+                        amenityDropdown.classList.remove('show');
+                    }
+                });
+            }
+
+            // Render chart if data exists
+            if (chartData.length > 0) {
+                renderChart(chartData);
+            }
             
             console.log('✅ Dashboard rendered successfully!');
         }
@@ -393,6 +610,101 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
                     </div>
                 </div>
             `;
+        }
+
+        // Helper functions for amenity handling
+        function toggleAmenity(amenityId) {
+            if (selectedAmenities.includes(amenityId)) {
+                selectedAmenities = selectedAmenities.filter(id => id !== amenityId);
+            } else {
+                selectedAmenities.push(amenityId);
+            }
+            renderDashboard();
+        }
+
+        function clearAmenities() {
+            selectedAmenities = [];
+            renderDashboard();
+        }
+
+        // Chart rendering
+        let chartInstance = null;
+        
+        function renderChart(data) {
+            const canvas = document.getElementById('trendsChart');
+            if (!canvas) return;
+
+            // Destroy existing chart
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
+
+            const ctx = canvas.getContext('2d');
+            
+            chartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.map(d => d.period),
+                    datasets: [
+                        {
+                            label: 'Studio',
+                            data: data.map(d => d.Studio || 0),
+                            borderColor: '#8884d8',
+                            backgroundColor: '#8884d8',
+                            tension: 0.1
+                        },
+                        {
+                            label: '1 Bed',
+                            data: data.map(d => d['1 Bed'] || 0),
+                            borderColor: '#82ca9d',
+                            backgroundColor: '#82ca9d',
+                            tension: 0.1
+                        },
+                        {
+                            label: '2 Bed',
+                            data: data.map(d => d['2 Bed'] || 0),
+                            borderColor: '#ffc658',
+                            backgroundColor: '#ffc658',
+                            tension: 0.1
+                        },
+                        {
+                            label: '3 Bed',
+                            data: data.map(d => d['3 Bed'] || 0),
+                            borderColor: '#ff7300',
+                            backgroundColor: '#ff7300',
+                            tension: 0.1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: false
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            title: {
+                                display: true,
+                                text: 'Rent per Sq Ft ($)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Quarter'
+                            }
+                        }
+                    }
+                }
+            });
         }
 
         // Initialize
