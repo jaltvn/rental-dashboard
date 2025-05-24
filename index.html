@@ -17,9 +17,10 @@
     <style>
         .card {
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             border: 1px solid #e5e7eb;
+            margin-bottom: 8px;
         }
         .card-header {
             padding: 24px 24px 16px 24px;
@@ -391,19 +392,13 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
             const chartData = generateChartData();
             
             const html = `
-                <div class="p-6 min-h-screen">
-                    <div class="max-w-7xl mx-auto space-y-6">
+                <div class="p-8 min-h-screen">
+                    <div class="max-w-7xl mx-auto space-y-8">
                         <!-- Header -->
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-2">
                             <div>
                                 <h1 class="text-3xl font-bold text-gray-900">Vancouver Rental Dashboard</h1>
                                 <p class="text-gray-600 mt-1">Purpose-built rental units market analysis</p>
-                                <p class="text-sm text-gray-500 mt-1">
-                                    ${usingSampleData ? 
-                                        `Showing ${filteredData.length} units from ${rentalData.length} sample units (Demo dataset)` :
-                                        `Showing ${filteredData.length} units from ${rentalData.length} total units`
-                                    }
-                                </p>
                             </div>
 
                         <!-- Rent Range Section -->
@@ -441,7 +436,7 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
                                 <h3 class="text-lg font-semibold">Historical Rent per Square Foot Trends</h3>
                             </div>
                             <div class="card-content">
-                                <div style="height: 320px;">
+                                <div style="height: 400px; padding: 16px 0;">
                                     ${chartData.length > 0 ? `
                                         <canvas id="trendsChart"></canvas>
                                     ` : `
@@ -453,7 +448,7 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
                             </div>
                             
                             <!-- Filters -->
-                            <div class="flex flex-wrap gap-3">
+                            <div class="flex flex-wrap gap-4">
                                 <select id="regionSelect" class="select-box w-64">
                                     <optgroup label="All Regions">
                                         <option value="All Cities">All Cities</option>
@@ -503,7 +498,7 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
                         </div>
 
                         <!-- Market Summary Cards -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             ${['studio', '1bed', '2bed', '3bed'].map(unitType => `
                                 <div class="card">
                                     <div class="card-header">
