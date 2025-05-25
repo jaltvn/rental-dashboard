@@ -457,7 +457,9 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
                                 <div class="card">
                                     <div class="card-header">
                                         <h3 class="text-sm font-medium text-gray-600 flex items-center justify-between">
-                                            ${unitType === 'studio' ? 'Studio' : `${unitType.charAt(0).toUpperCase()}${unitType.slice(1)}`}
+                                            ${unitType === 'studio' ? 'Studio' : 
+                                              unitType === '1bed' ? '1 Bedroom' :
+                                              unitType === '2bed' ? '2 Bedroom' : '3 Bedroom'}
                                             <span class="text-gray-400">—</span>
                                         </h3>
                                     </div>
