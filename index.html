@@ -317,12 +317,12 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
         }
 
         // Generate chart data
-        function generateChartData() {
-            if (!rentalData.length) return [];
+        function generateChartData(dataToUse = rentalData) {
+            if (!dataToUse.length!rentalData.length) return [];
 
             const quarters = {};
             
-            rentalData.forEach(unit => {
+            dataToUse.forEach(unit => {
                 const date = unit['Date Added'];
                 const year = date.getFullYear();
                 const month = date.getMonth() + 1;
@@ -389,7 +389,7 @@ BEE45B80,Apr-25,Fynn,1bed," $2,173.00 ",568, $3.83 ,River District,Vancouver,TRU
             const filteredData = getFilteredData();
             const kpis = calculateKPIs(filteredData);
             const rentRanges = calculateRentRanges(filteredData);
-            const chartData = generateChartData();
+            const chartData = generateChartData(filteredData);
             
             const html = `
                 <div class="p-8 min-h-screen">
